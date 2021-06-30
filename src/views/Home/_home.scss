@@ -1,0 +1,85 @@
+#home {
+    height: 100vh;
+    background: url("../../assets/images/bgImage.jpg");
+    background-size: cover;
+
+    .header-text {
+        animation: fadeIn 2s, slideInFromBelow 1s;
+        padding-top: $layout-06 + $layout-02;
+        font-size: 6vw;
+        text-align: center;
+    }
+
+    #main-content {
+        animation: fadeIn 2s, slideInFromBelow 1s;
+        padding-top: $layout-06;
+        padding-bottom: $layout-07 + $layout-02;
+        font-size: 4vw;
+        text-align: center;
+
+        &.medium {
+            font-size: 5.5vw;
+
+            #main-text {
+                padding-left: $layout-07;
+                padding-right: $layout-07;
+            }
+        }
+
+        &.small {
+            font-size: 6vw;
+            padding-top: $layout-06;
+            padding-bottom: $layout-06;
+            --translateCircleSize: 1;
+
+            #main-text {
+                padding-left: $spacing-04;
+                padding-right: $spacing-04;
+            }
+        }
+    }
+
+    #footer {
+        animation: fadeIn 2s, slideInFromBelow 1s;
+        text-align: center;
+
+        #links {
+            a {
+                padding-left: $spacing-05;
+                padding-right: $spacing-05;
+            }
+
+            svg {
+                height: 32px;
+            }
+
+            .link-text {
+                font-weight: 500;
+                font-size: 1.6em;
+                text-shadow: 2px 2px 5px #000000;
+            }
+        }
+
+        &.medium {
+            #links {
+                svg {
+                    height: 40px;
+                }
+            }
+        }
+
+        &.small {
+            #links {
+                a {
+                    padding-left: $spacing-04;
+                    padding-right: $spacing-04;
+                }
+
+                svg {
+                    height: 32px;
+                }
+            }
+        }
+        
+    }
+}

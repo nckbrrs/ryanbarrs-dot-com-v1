@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600;700&display=swap');
+
+
+#footer {
+    #links {
+        display: inline-flex;
+    
+        svg {
+            fill: #ffffff;
+        }
+    
+        .link-text {
+            display: inline-block;
+            font-family: Vollkorn;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        &:hover {
+            .link-text:not(:hover) {
+                opacity: 0.3;
+            }
+    
+            svg:not(:hover) {
+                opacity: 0.3;
+            }
+        }
+    }
+
+    &.small {
+        #links .link-text {
+            display: none;
+        }
+    }
+
+    &.medium {
+        #links .link-text {
+            display: none;
+        }
+    }
+
+    &:not(.small):not(.medium) {
+        #links svg {
+            display: none
+        }
+    }
+}
