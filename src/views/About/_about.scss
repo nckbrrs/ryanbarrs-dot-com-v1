@@ -5,14 +5,18 @@
     background-size: cover;
 
     #header {
-        .header-text {
-            font-family: 'Vollkorn', serif;
-            font-weight: 700;
-            text-shadow: 5px 5px 5px #000000;
-            color: #ffffff;
-            padding-top: $layout-06 + $layout-02;
-            font-size: 4.6em;
-            text-align: center;
+        a {
+            text-decoration: none;
+
+            .header-text {
+                font-family: 'Vollkorn', serif;
+                font-weight: 700;
+                text-shadow: 3px 3px 5px #000000;
+                color: #ffffff;
+                padding-top: $layout-06 + $layout-02;
+                font-size: 4.6em;
+                text-align: center;
+            }
         }
 
         &.small {
@@ -44,7 +48,7 @@
                 width: 100%;
                 max-width: 404px;
                 max-height: 404px;
-                box-shadow: 2px 2px 10px #000000;
+                box-shadow: 2px 2px 5px #000000;
             }
         }
 
@@ -54,11 +58,10 @@
             line-height: 1.6em;
             position: relative;
             display: inline-block;
-            text-shadow: 2px 2px 1px #000000;
+            text-shadow: 1px 1px 1px #000000;
             font-size: 1.6em;
             font-weight: 500;
             text-align: left;
-            //padding-left: $spacing-09;
         }
 
         &.medium {
@@ -76,10 +79,6 @@
                 padding-bottom: $layout-04;
             }
 
-            #headshot {
-                
-            }
-
             #about-text {
                 padding-left: $spacing-08;
                 padding-right: $spacing-08;
@@ -94,6 +93,8 @@
         svg {
             height: 40px;
             fill: #ffffff;
+            border-radius: 50%;
+            box-shadow: 2px 2px 2px black;
         }
 
         .link-text {
@@ -103,16 +104,12 @@
             text-decoration: none;
             font-weight: 500;
             font-size: 1.6em;
-            text-shadow: 2px 2px 5px #000000;
+            text-shadow: 2px 2px 2px #000000;
             white-space: nowrap;
         }
 
         &:hover {
-            .link-text:not(:hover) {
-                opacity: 0.3;
-            }
-    
-            svg:not(:hover) {
+            .bx--col:not(:hover) {
                 opacity: 0.3;
             }
         }

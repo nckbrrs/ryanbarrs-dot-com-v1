@@ -41,7 +41,9 @@ class About extends React.Component<{}, AboutState> {
       <div id="about-page" className="bx--grid bx--grid--full-width">
         <div id="header" className={this.headerClassNames()}>
           <div className="bx--col">
-            <h1 className="header-text" data-content={contentConfig['about'].headerText}>{contentConfig['about'].headerText}</h1>
+            <a href="/">
+              <h1 className="header-text" data-content={contentConfig['about'].headerText}>{contentConfig['about'].headerText}</h1>
+            </a>
           </div>
         </div>
         <div  id="about-content" className={this.aboutContentClassNames()}>

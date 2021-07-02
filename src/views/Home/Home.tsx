@@ -40,7 +40,9 @@ class Home extends React.Component<{}, HomeState> {
       <div id="home-page" className="bx--grid bx--grid--full-width">
         <div id="header" className={this.headerClassNames()}>
           <div className="bx--col">
-            <h1 className="header-text" data-content={contentConfig['about'].headerText}>{contentConfig['about'].headerText}</h1>
+            <a href="/">
+              <h1 className="header-text" data-content={contentConfig['about'].headerText}>{contentConfig['about'].headerText}</h1>
+            </a>
           </div>
         </div>
         <div id="main-content" className={this.mainContentClassNames()}>
@@ -48,7 +50,7 @@ class Home extends React.Component<{}, HomeState> {
           <div className="bx--col-lg-11">
             <div id="main-text">
               I am fixing broken hearts with bioengineering.
-              <br />
+              <br /><p>&nbsp;</p>
               Let's work together.
             </div>
           </div>
