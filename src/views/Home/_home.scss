@@ -16,6 +16,14 @@
             font-size: 4.6em;
             text-align: center;
         }
+
+        &.small {
+            .header-text {
+                padding-top: $layout-05;
+                font-size: 3.2em;
+            }
+            
+        }
     }
 
     #main-content {
@@ -36,7 +44,7 @@
         &.medium {
             font-size: 3em;
             padding-top: $layout-07;
-            padding-bottom: $layout-07;
+            padding-bottom: $layout-05;
 
             #main-text {
                 padding-left: $layout-04;
@@ -45,9 +53,9 @@
         }
 
         &.small {
-            font-size: 3em;
-            padding-top: $layout-07;
-            padding-bottom: $layout-07;
+            font-size: 2.5em;
+            padding-top: $layout-05;
+            padding-bottom: $layout-05;
             --translateCircleSize: 1;
 
             #main-text {
@@ -99,14 +107,15 @@
 
         &.small {
             padding-bottom: $layout-04;
-            padding-top: $layout-04;
+            padding-top: $layout-01;
+
+            #links .bx--col {
+                padding-left: $spacing-04;
+                padding-right: $spacing-04;
+            }
 
             .link-text {
                 display: none;
-            }
-
-            svg {
-                height: 40px;
             }
         }
 
