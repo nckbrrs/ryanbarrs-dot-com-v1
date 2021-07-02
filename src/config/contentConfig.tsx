@@ -1,10 +1,8 @@
-import TwitterIcon from '../assets/icons/Twitter';
-import AppleMusicIcon from '../assets/icons/AppleMusic';
+import AboutMeIcon from '../assets/icons/AboutMeIcon';
 import EmailIcon from '../assets/icons/Email';
-import InstagramIcon from '../assets/icons/Instagram';
 import LinkedinIcon from '../assets/icons/Linkedin';
-import SpotifyIcon from '../assets/icons/Spotify';
-import SoundcloudIcon from '../assets/icons/Soundcloud';
+import PublicationsIcon from '../assets/icons/Publications';
+import SciComIcon from '../assets/icons/SciCom';
 
 export const contentConfig = {
     home: {
@@ -15,8 +13,45 @@ export const contentConfig = {
             { 
                 "name": "about",
                 "text": "About Me",
-                "href": "https://music.apple.com/us/artist/nick-barrs/1539845933",
-                "icon": <AppleMusicIcon/>
+                "href": "/about",
+                "icon": <AboutMeIcon/>
+            },
+            {
+                "name": "linkedin",
+                "text": "LinkedIn",
+                "href": "https://www.linkedin.com/in/ryanbarrs",
+                "icon": <LinkedinIcon/>
+            },
+            {
+                "name": "pubs",
+                "text": "Publications",
+                "href": "https://scholar.google.com/citations?user=5a-G8F4AAAAJ&hl=en",
+                "icon": <PublicationsIcon/>
+            },
+            {
+                "name": "sciCom",
+                "text": "Science Communications",
+                "href": "https://www.clippings.me/ryanbarrs",
+                "icon": <SciComIcon/>
+            },
+            {
+                "name": "email",
+                "text": "Email",
+                "href": "mailto:rwbarrs@g.clemson.edu",
+                "icon": <EmailIcon/>
+            }
+        ]
+    },
+    about: {
+        headerText: "Hi, I'm Ryan.",
+        mainText: "Poopoo",
+        mainText2: "Peepee",
+        socialLinks: [
+            { 
+                "name": "about",
+                "text": "About Me",
+                "href": "/about",
+                "icon": <AboutMeIcon/>
             },
             {
                 "name": "linkedin",
@@ -28,13 +63,13 @@ export const contentConfig = {
                 "name": "pubs",
                 "text": "Publications",
                 "href": "https://open.spotify.com/artist/2ZXVOSBi1E69IxiGuX8ofU?si=cSD9lEXoTRyGvoWBxbHGWA",
-                "icon": <SpotifyIcon/>
+                "icon": <PublicationsIcon/>
             },
             {
                 "name": "sciCom",
                 "text": "Science Communication",
                 "href": "https://soundcloud.com/nckbrrs",
-                "icon": <SoundcloudIcon/>
+                "icon": <SciComIcon/>
             },
             {
                 "name": "email",

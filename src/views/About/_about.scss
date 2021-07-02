@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600;700&display=swap');
-
-#home-page {
+#about-page {
     min-height: 100vh;
     height: 100%;
     background: url("../../assets/images/bgImage.jpg");
@@ -16,58 +14,71 @@
             font-size: 4.6em;
             text-align: center;
         }
-
-        &.small {
-            //font-size: 0.75em;
-        }
     }
 
-    #main-content {
-        animation: fadeIn 2s, slideInFromBelow 1s;
-        padding-top: $layout-07;
-        font-size: 3.75em;
-        text-align: center;
+    #about-content {
+        padding-top: $layout-06;
 
-        #main-text {
+        #headshot-wrapper {
+            text-align: center;
+
+            #headshot-spacer {
+                display: inline-block;
+                height: 100%;
+                vertical-align: middle;
+            }
+    
+            #headshot {
+                vertical-align: middle;
+                border: 5px solid white;
+                border-radius: 50%;
+                height: auto;
+                width: 100%;
+                max-width: 404px;
+                max-height: 404px;
+                box-shadow: 2px 2px 10px #000000;
+            }
+        }
+
+        #about-text {
             font-family: Vollkorn;
             color: #ffffff;
             line-height: 1.6em;
             position: relative;
             display: inline-block;
-            text-shadow: 2px 2px 5px #000000;
+            text-shadow: 2px 2px 1px #000000;
+            font-size: 1.6em;
+            font-weight: 500;
+            text-align: left;
+            //padding-left: $spacing-09;
         }
 
         &.medium {
-            font-size: 3em;
-            padding-top: $layout-07;
-            padding-bottom: $layout-07;
-
-            #main-text {
-                padding-left: $layout-04;
-                padding-right: $layout-04;
+            #headshot-wrapper {
+                padding-bottom: $layout-04;
             }
         }
 
         &.small {
-            font-size: 3em;
-            padding-top: $layout-07;
-            padding-bottom: $layout-07;
-            --translateCircleSize: 1;
+            padding-top: $layout-03;
 
-            #main-text {
-                padding-left: $spacing-04;
-                padding-right: $spacing-04;
+            #headshot-wrapper {
+                padding-bottom: $layout-04;
+            }
+
+            #about-text {
+                padding-left: $spacing-08;
+                padding-right: $spacing-08;
             }
         }
     }
 
     #footer {
-        animation: fadeIn 2s, slideInFromBelow 1s;
         text-align: center;
         padding-top: $layout-06 + $layout-03;
 
         svg {
-            height: 40px;
+            height: 32px;
             fill: #ffffff;
         }
 
@@ -97,16 +108,22 @@
             padding-bottom: $layout-04;
 
             svg {
+                height: 40px;
                 display: none;
             }
         }
 
         &.small {
             padding-bottom: $layout-04;
-            padding-top: $layout-04;
+            padding-top: $layout-06;
 
             .link-text {
                 display: none;
+            }
+
+            a {
+                // padding-left: $spacing-04;
+                // padding-right: $spacing-04;
             }
 
             svg {

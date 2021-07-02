@@ -1,11 +1,12 @@
 import React from "react";
+import Headshot from "../../assets/images/headshot.png";
 import { contentConfig } from '../../config/contentConfig';
 
-interface HomeState {
+interface AboutState {
   curWidth: number;
 }
 
-class Home extends React.Component<{}, HomeState> {
+class About extends React.Component<{}, AboutState> {
   constructor(props) {
     super(props);
     this.updateWidth = this.updateWidth.bind(this);
@@ -16,7 +17,7 @@ class Home extends React.Component<{}, HomeState> {
 
   updateWidth() {
     this.setState({
-      curWidth: document.getElementById("home-page")!.offsetWidth
+      curWidth: document.getElementById("about-page")!.offsetWidth
     })
   }
 
@@ -26,7 +27,7 @@ class Home extends React.Component<{}, HomeState> {
   }
 
   componentDidUpdate() {
-    if (document.getElementById("home-page")!.offsetWidth !== this.state.curWidth) {
+    if (document.getElementById("about-page")!.offsetWidth !== this.state.curWidth) {
       this.updateWidth();
     }
   }
@@ -37,22 +38,28 @@ class Home extends React.Component<{}, HomeState> {
 
   render() {
     return (
-      <div id="home-page" className="bx--grid bx--grid--full-width">
+      <div id="about-page" className="bx--grid bx--grid--full-width">
         <div id="header" className={this.headerClassNames()}>
           <div className="bx--col">
             <h1 className="header-text" data-content={contentConfig['about'].headerText}>{contentConfig['about'].headerText}</h1>
           </div>
         </div>
-        <div id="main-content" className={this.mainContentClassNames()}>
-          <div className="bx--col"/>
-          <div className="bx--col-lg-11">
-            <div id="main-text">
-              I am fixing broken hearts with bioengineering.
-              <br />
-              Let's work together.
+        <div  id="about-content" className={this.aboutContentClassNames()}>
+          <div className="bx--col-xlg-1"/>
+          <div className="bx--col-lg bx--col-md-8" id="headshot-wrapper">
+            <span id="headshot-spacer"></span>
+            <img id="headshot" alt="my face" src={Headshot}/>
+          </div>
+          <div className="bx--col-xlg-6 bx--col-lg-8" id="about-text">
+            <div>
+              I am a PhD Candidate in Bioengineering living in Charleston, SC.
+              <br /><br />
+              My research focuses on cardiovascular tissue engineering and cardiac regeneration, and I am currently supported by an NIH F31 Predoctoral Fellowship.
+              <br /><br />
+              Outside of the lab, I enjoy cooking, roasting coffee, discovering new music, and playing the ancient Irish sport of hurling with the Charleston Hurling Club.
             </div>
           </div>
-          <div className="bx--col"/>
+          <div className="bx--col-xlg-1"/>
         </div>
         <div id="footer" className={this.footerClassNames()}>
           <div className="bx--col"/>
@@ -89,13 +96,13 @@ class Home extends React.Component<{}, HomeState> {
     return classNames.join(" ");
   }
 
-  mainContentClassNames() {
+  aboutContentClassNames() {
     let classNames = ["bx--row"];
 
-    if (this.state.curWidth < 875) {
+    if (this.state.curWidth < 680 ) {
       classNames.push("small");
     }
-    else if (this.state.curWidth < 955) {
+    else if (this.state.curWidth < 1056) {
       classNames.push("medium");
     }
 
@@ -105,7 +112,7 @@ class Home extends React.Component<{}, HomeState> {
   footerClassNames() {
     let classNames = ["bx--row"];
 
-    if (this.state.curWidth < 955) {
+    if (this.state.curWidth < 900) {
       classNames.push("small");
     }
     else if (this.state.curWidth < 1487) {
@@ -116,4 +123,4 @@ class Home extends React.Component<{}, HomeState> {
   }
 }
 
-export default Home;
+export default About;

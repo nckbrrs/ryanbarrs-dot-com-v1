@@ -2,6 +2,7 @@ import React from "react";
 import "./App.scss";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Home from "./views/Home";
+import About from "./views/About";
 
 class App extends React.Component<{}, {}> {
     render() {
@@ -11,6 +12,10 @@ class App extends React.Component<{}, {}> {
                     <Route
                         exact path="/"
                         render={() => <Home/>}
+                    />
+                    <Route
+                        exact path="/about"
+                        render={() => <About/>}
                     />
                     <Route
                         path="*"

@@ -7,10 +7,9 @@
 @import "carbon-components/scss/components/button/button.scss";
 
 
-@import "./components/Header/header.scss";
-@import "./components/Main/main.scss";
-@import "./components/Footer/footer.scss";
 @import "./views/Home/home.scss";
+@import "./views/About/about.scss";
+
 
 @keyframes fadeIn {
     0%   {opacity: 0;}
