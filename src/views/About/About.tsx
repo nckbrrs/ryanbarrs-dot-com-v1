@@ -52,7 +52,7 @@ class About extends React.Component<{}, AboutState> {
             <span id="headshot-spacer"></span>
             <img id="headshot" alt="my face" src={Headshot}/>
           </div>
-          <div className="bx--col-xlg-6 bx--col-lg-8" id="about-text">
+          <div className="bx--col-xlg-6 bx--col-lg-7" id="about-text">
             <div>
               I am a PhD Candidate in Bioengineering living in Charleston, SC.
               <br /><br />
@@ -114,7 +114,7 @@ class About extends React.Component<{}, AboutState> {
   footerClassNames() {
     let classNames = ["bx--row"];
 
-    if (this.state.curWidth < 900) {
+    if (this.state.curWidth < 950) {
       classNames.push("small");
     }
     else if (this.state.curWidth < 1487) {

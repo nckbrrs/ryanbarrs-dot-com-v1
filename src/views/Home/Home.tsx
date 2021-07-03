@@ -49,8 +49,8 @@ class Home extends React.Component<{}, HomeState> {
           <div className="bx--col"/>
           <div className="bx--col-lg-11">
             <div id="main-text">
-              I am fixing broken hearts with bioengineering.
-              <br /><p>&nbsp;</p>
+              I am fixing broken hearts with bioengineering.<br/>
+              <p>&nbsp;</p>
               Let's work together.
             </div>
           </div>
