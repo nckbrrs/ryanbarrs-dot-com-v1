@@ -41,7 +41,7 @@ class Home extends React.Component<{}, HomeState> {
         <div id="header" className={this.headerClassNames()}>
           <div className="bx--col">
             <a href="/">
-              <h1 className="header-text" data-content={contentConfig['about'].headerText}>{contentConfig['about'].headerText}</h1>
+              <h1 className="header-text" data-content={contentConfig['home'].headerText}>{contentConfig['home'].headerText}</h1>
             </a>
           </div>
         </div>

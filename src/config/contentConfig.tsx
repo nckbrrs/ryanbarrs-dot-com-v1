@@ -44,8 +44,6 @@ export const contentConfig = {
     },
     about: {
         headerText: "Hi, I'm Ryan.",
-        mainText: "Poopoo",
-        mainText2: "Peepee",
         socialLinks: [
             { 
                 "name": "about",
