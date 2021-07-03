@@ -68,6 +68,11 @@
             #headshot-wrapper {
                 padding-bottom: $layout-04;
             }
+
+            #about-text {
+                padding-left: $layout-04;
+                padding-right: $layout-04;
+            }
         }
 
         &.small {
@@ -80,8 +85,8 @@
             }
 
             #about-text {
-                padding-left: $layout-04;
-                padding-right: $layout-04;
+                padding-left: $layout-03;
+                padding-right: $layout-03;
             }
         }
 
