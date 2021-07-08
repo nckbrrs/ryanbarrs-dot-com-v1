@@ -1,4 +1,4 @@
-import AboutMeIcon from '../assets/icons/AboutMeIcon';
+import AboutMe from '../assets/icons/AboutMe';
 import EmailIcon from '../assets/icons/Email';
 import LinkedinIcon from '../assets/icons/Linkedin';
 import PublicationsIcon from '../assets/icons/Publications';
@@ -14,7 +14,7 @@ export const contentConfig = {
                 "name": "about",
                 "text": "About Me",
                 "href": "/about",
-                "icon": <AboutMeIcon/>
+                "icon": <AboutMe/>
             },
             {
                 "name": "linkedin",
@@ -49,7 +49,7 @@ export const contentConfig = {
                 "name": "about",
                 "text": "About Me",
                 "href": "/about",
-                "icon": <AboutMeIcon/>
+                "icon": <AboutMe/>
             },
             {
                 "name": "linkedin",

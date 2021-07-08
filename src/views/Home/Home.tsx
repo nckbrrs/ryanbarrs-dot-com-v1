@@ -81,10 +81,10 @@ class Home extends React.Component<{}, HomeState> {
   headerClassNames() {
     let classNames = ["bx--row"];
   
-    if (this.state.curWidth < 875) {
+    if (this.state.curWidth < 575) {
       classNames.push("small");
     }
-    else if (this.state.curWidth < 1320) {
+    else if (this.state.curWidth < 955) {
       classNames.push("medium");
     }
 
@@ -94,7 +94,7 @@ class Home extends React.Component<{}, HomeState> {
   mainContentClassNames() {
     let classNames = ["bx--row"];
 
-    if (this.state.curWidth < 875) {
+    if (this.state.curWidth < 575) {
       classNames.push("small");
     }
     else if (this.state.curWidth < 955) {

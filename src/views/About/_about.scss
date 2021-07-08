@@ -13,7 +13,7 @@
                 font-weight: 700;
                 text-shadow: 3px 3px 5px #000000;
                 color: #ffffff;
-                padding-top: $layout-06 + $layout-02;
+                padding-top: 13vh;
                 font-size: 4.6em;
                 text-align: center;
             }
@@ -21,7 +21,7 @@
 
         &.small {
             .header-text {
-                padding-top: $layout-05;
+                padding-top: 7vh;
                 font-size: 3.2em;
             }
             
@@ -29,7 +29,7 @@
     }
 
     #about-content {
-        padding-top: $layout-04 + $layout-02;
+        padding-top: 7.85vh;
 
         #headshot-wrapper {
             text-align: center;
@@ -66,7 +66,7 @@
 
         &.medium {
             #headshot-wrapper {
-                padding-bottom: $layout-04;
+                padding-bottom: 5.25vh;
             }
 
             #about-text {
@@ -76,12 +76,12 @@
         }
 
         &.small {
-            padding-top: $layout-03;
+            padding-top: 3.5vh;
 
             #headshot-wrapper {
                 padding-left: $spacing-08;
                 padding-right: $spacing-08;
-                padding-bottom: $layout-04;
+                padding-bottom: 5.25vh;
             }
 
             #about-text {
@@ -97,7 +97,7 @@
 
     #footer {
         text-align: center;
-        padding-top: $layout-06 + $layout-03;
+        padding-top: 14vh;
 
         svg {
             height: 40px;
@@ -124,8 +124,8 @@
         }
 
         &.medium {
-            padding-top: $layout-06 + $layout-03;
-            padding-bottom: $layout-04;
+            padding-top: 14vh;
+            padding-bottom: 5.25vh;
 
             svg {
                 display: none;
@@ -133,8 +133,8 @@
         }
 
         &.small {
-            padding-bottom: $layout-06;
-            padding-top: $layout-06;
+            padding-bottom: 10.5vh;
+            padding-top: 10.5vh;
 
             #links .bx--col {
                 padding-left: $spacing-04;
