@@ -2,10 +2,11 @@
 
 #home-page {
     min-height: 100vh;
-    min-width: 100vw;
+    // min-width: 100vw;
     height: 100%;
     background: url("../../assets/images/bgImage.jpg");
     background-size: cover;
+    overflow-x: hidden;
 
     #header {
         animation: fadeIn 2s, slideInFromBelow 1s;
