@@ -37,15 +37,15 @@ class Home extends React.Component<{}, HomeState> {
 
   render() {
     return (
-      <div id="home-page" className="bx--grid bx--grid--full-width">
-        <div id="header" className={this.headerClassNames()}>
+      <div id="home-page" className={"bx--grid bx--grid--full-width " + this.homeSize()}>
+        <div id="header" className="bx--row">
           <div className="bx--col">
             <a href="/">
               <h1 className="header-text" data-content={contentConfig['home'].headerText}>{contentConfig['home'].headerText}</h1>
             </a>
           </div>
         </div>
-        <div id="main-content" className={this.mainContentClassNames()}>
+        <div id="main-content" className="bx--row">
           <div className="bx--col"/>
           <div className="bx--col-lg-11">
             <div id="main-text">
@@ -56,7 +56,7 @@ class Home extends React.Component<{}, HomeState> {
           </div>
           <div className="bx--col"/>
         </div>
-        <div id="footer" className={this.footerClassNames()}>
+        <div id="footer" className="bx--row">
           <div className="bx--col"/>
           <div id="links" className="bx--row">
             {
@@ -76,6 +76,24 @@ class Home extends React.Component<{}, HomeState> {
         </div>
       </div>
     )
+  }
+
+  homeSize() {
+    if (this.state.curWidth < 575) {
+      return "small";
+    }
+
+    else if (this.state.curWidth < 955) {
+      return "medium";
+    }
+
+    else if (this.state.curWidth < 1487) {
+      return "large";
+    }
+
+    else {
+      return "xlarge";
+    }
   }
 
   headerClassNames() {

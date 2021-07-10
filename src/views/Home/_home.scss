@@ -1,134 +1,154 @@
 @import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600;700&display=swap');
 
 #home-page {
-    min-height: 100vh;
-    // min-width: 100vw;
     height: 100%;
+    min-height: 100vh;
     background: url("../../assets/images/bgImage.jpg");
     background-size: cover;
     overflow-x: hidden;
 
     #header {
         animation: fadeIn 2s, slideInFromBelow 1s;
+        padding-top: 13vh;
+        text-align: center;
 
         a {
             text-decoration: none;
 
             .header-text {
                 font-family: 'Vollkorn', serif;
+                font-size: 4.6rem;
                 font-weight: 700;
-                text-shadow: 3px 3px 5px #000000;
                 color: #ffffff;
-                padding-top: 13vh;
-                font-size: 4.6em;
-                text-align: center;
+                text-shadow: 3px 3px 5px #000000;
             }
-        }
-
-        &.small {
-            .header-text {
-                padding-top: 7vh;
-                font-size: 3.2em;
-            }
-            
         }
     }
 
     #main-content {
         animation: fadeIn 2s, slideInFromBelow 1s;
         padding-top: 17.5vh;
-        font-size: 3.75em;
         text-align: center;
 
         #main-text {
             font-family: Vollkorn;
+            line-height: 4.75rem;
+            font-size: 3.75rem;
             color: #ffffff;
-            line-height: 1.3em;
-            position: relative;
-            display: inline-block;
             text-shadow: 2px 2px 2px #000000;
-        }
-
-        &.medium {
-            font-size: 3em;
-            padding-top: 17.5vh;
-            padding-bottom: 7vh;
-
-            #main-text {
-                padding-left: $layout-04;
-                padding-right: $layout-04;
-            }
-        }
-
-        &.small {
-            font-size: 1.8em;
-            line-height: 1.6em;
-            padding-top: 7.5vh;
-            padding-bottom: 7.5vh;
-            --translateCircleSize: 1;
-
-            #main-text {
-                padding-left: $spacing-04;
-                padding-right: $spacing-04;
-            }
         }
     }
 
     #footer {
         animation: fadeIn 2s, slideInFromBelow 1s;
+        padding-top: 17.5vh;
         text-align: center;
-        padding-top: 14vh;
 
-        svg {
-            height: 40px;
-            fill: #ffffff;
-            border-radius: 50%;
-            box-shadow: 2px 2px 2px black;
-        }
+        #links {
+            &:hover {
+                .bx--col:not(:hover) {
+                    opacity: 0.3;
+                }
+            }
 
-        .link-text {
-            display: inline-block;
-            font-family: Vollkorn;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1.6em;
-            text-shadow: 2px 2px 2px #000000;
-            white-space: nowrap;
-        }
-
-        &:hover {
-            .bx--col:not(:hover) {
-                opacity: 0.3;
+            a {
+                text-decoration: none;
+    
+                svg {
+                    height: 40px;
+                    fill: #ffffff;
+                    border-radius: 50%;
+                    box-shadow: 2px 2px 2px black;
+                }
+        
+                .link-text {
+                    font-family: Vollkorn;
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size: 1.6em;
+                    text-shadow: 2px 2px 2px #000000;
+                    white-space: nowrap;
+                }            
             }
         }
+    }
 
-        &.medium {
-            padding-top: 14vh;
-            padding-bottom: 5.25vh;
-
+    &.xlarge {
+        #footer {
             svg {
                 display: none;
             }
         }
+    }
 
-        &.small {
-            padding-bottom: 5.25vh;
-            padding-top: 5.25vh;
-
-            #links .bx--col {
-                padding-left: $spacing-04;
-                padding-right: $spacing-04;
+    &.large {
+        #footer {
+            svg {
+                display: none;
             }
+        }
+    }
+
+    &.medium {
+        #main-content {
+            padding-top: 14vh;
+
+            #main-text {
+                line-height: 3.75rem;
+                font-size: 3rem;
+                padding-left: $layout-04;
+                padding-right: $layout-04;
+            }
+        }
+
+        #footer {
+            padding-top: 14vh;
+            padding-bottom: 5.25vh;
 
             .link-text {
                 display: none;
             }
         }
+    }
 
-        &:not(.small):not(.medium) {
-            svg {
-                display: none
+    &.small {
+        #header {
+            padding-top: 15vh;
+            
+            .header-text {
+                font-size: 3rem;
+            }
+        }
+
+        #main-content {
+            padding-top: 14vh;
+            padding-left: $spacing-04;
+            padding-right: $spacing-04;
+            --translateCircleSize: 1;
+
+            #main-text {
+                line-height: 2.375rem;
+                font-size: 1.75rem;
+            }
+        }
+
+        #footer {
+            padding-top: 14vh;
+
+            #links {
+                .bx--col {
+                    padding-left: $spacing-04;
+                    padding-right: $spacing-04;
+
+                    .link-text {
+                        display: none;
+                    }
+                    
+                    svg {
+                        height: 32px;
+                    }
+                }                
             }
         }
     }

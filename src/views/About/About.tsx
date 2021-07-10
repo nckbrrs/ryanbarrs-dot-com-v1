@@ -38,15 +38,15 @@ class About extends React.Component<{}, AboutState> {
 
   render() {
     return (
-      <div id="about-page" className="bx--grid bx--grid--full-width">
-        <div id="header" className={this.headerClassNames()}>
+      <div id="about-page" className={"bx--grid bx--grid--full-width " + this.aboutSize()}>
+        <div id="header" className="bx--row">
           <div className="bx--col">
             <a href="/">
               <h1 className="header-text" data-content={contentConfig['about'].headerText}>{contentConfig['about'].headerText}</h1>
             </a>
           </div>
         </div>
-        <div  id="about-content" className={this.aboutContentClassNames()}>
+        <div  id="about-content" className="bx--row">
           <div className="bx--col-xlg-1"/>
           <div className="bx--col-lg bx--col-md-8" id="headshot-wrapper">
             <span id="headshot-spacer"></span>
@@ -63,7 +63,7 @@ class About extends React.Component<{}, AboutState> {
           </div>
           <div className="bx--col-xlg-1"/>
         </div>
-        <div id="footer" className={this.footerClassNames()}>
+        <div id="footer" className="bx--row">
           <div className="bx--col"/>
           <div id="links" className="bx--row">
             {
@@ -83,6 +83,24 @@ class About extends React.Component<{}, AboutState> {
         </div>
       </div>
     )
+  }
+
+  aboutSize() {
+    if (this.state.curWidth < 680) {
+      return "small";
+    }
+
+    else if (this.state.curWidth < 1056) {
+      return "medium";
+    }
+
+    else if (this.state.curWidth < 1487) {
+      return "large";
+    }
+
+    else {
+      return "xlarge";
+    }
   }
 
   headerClassNames() {

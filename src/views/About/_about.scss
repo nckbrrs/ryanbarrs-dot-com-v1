@@ -6,26 +6,19 @@
     overflow-x: hidden;
 
     #header {
+        padding-top: 13vh;
+        text-align: center;
+
         a {
             text-decoration: none;
 
             .header-text {
                 font-family: 'Vollkorn', serif;
+                font-size: 4.6rem;
                 font-weight: 700;
-                text-shadow: 3px 3px 5px #000000;
                 color: #ffffff;
-                padding-top: 13vh;
-                font-size: 4.6em;
-                text-align: center;
+                text-shadow: 3px 3px 5px #000000;
             }
-        }
-
-        &.small {
-            .header-text {
-                padding-top: 7vh;
-                font-size: 3.2em;
-            }
-            
         }
     }
 
@@ -54,29 +47,99 @@
         }
 
         #about-text {
-            font-family: Vollkorn;
-            color: #ffffff;
-            line-height: 1.6em;
-            position: relative;
             display: inline-block;
-            text-shadow: 1px 1px 1px #000000;
-            font-size: 1.7em;
-            font-weight: 500;
+            position: relative;
             text-align: left;
+            font-family: Vollkorn;
+            line-height: 2.625rem;
+            font-size: 1.7rem;
+            font-weight: 500;
+            color: #ffffff;
+            text-shadow: 1px 1px 1px #000000;
         }
+    }
 
-        &.medium {
-            #headshot-wrapper {
-                padding-bottom: 5.25vh;
+    #footer {
+        padding-top: 14vh;
+        text-align: center;
+
+        #links {
+            &:hover {
+                .bx--col:not(:hover) {
+                    opacity: 0.3;
+                }
             }
 
+            svg {
+                height: 40px;
+                fill: #ffffff;
+                border-radius: 50%;
+                box-shadow: 2px 2px 2px black;
+            }
+    
+            .link-text {
+                display: inline-block;
+                font-family: Vollkorn;
+                font-weight: 500;
+                font-size: 1.6rem;
+                color: #ffffff;
+                text-decoration: none;
+                white-space: nowrap;
+                text-shadow: 2px 2px 2px #000000;
+            }
+        }
+    }
+
+    &.xlarge {
+        #about-content {
+            max-height: 500px;
+        }
+
+        svg {
+            display: none
+        }
+    }
+
+    &.large {
+        #about-content {
+            max-height: 500px;
+        }
+
+        svg {
+            display: none
+        }
+    }
+
+    &.medium {
+        #about-content {
+            padding-top: 5vh;
+
             #about-text {
+                padding-top: 5vh;
                 padding-left: $layout-04;
                 padding-right: $layout-04;
             }
         }
 
-        &.small {
+        #footer {
+            padding-bottom: 10.5vh;
+
+            .link-text {
+                display: none;
+            }
+        }
+    }
+
+    &.small {
+        #header {
+            padding-top: 7vh;
+
+            .header-text {
+                font-size: 3.2rem;
+            }
+        }
+        
+        #about-content {
             padding-top: 3.5vh;
 
             #headshot-wrapper {
@@ -91,65 +154,23 @@
             }
         }
 
-        &:not(.small):not(.medium) {
-            max-height: 500px;
-        }
-    }
-
-    #footer {
-        text-align: center;
-        padding-top: 14vh;
-
-        svg {
-            height: 40px;
-            fill: #ffffff;
-            border-radius: 50%;
-            box-shadow: 2px 2px 2px black;
-        }
-
-        .link-text {
-            display: inline-block;
-            font-family: Vollkorn;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1.6em;
-            text-shadow: 2px 2px 2px #000000;
-            white-space: nowrap;
-        }
-
-        &:hover {
-            .bx--col:not(:hover) {
-                opacity: 0.3;
-            }
-        }
-
-        &.medium {
-            padding-top: 14vh;
-            padding-bottom: 5.25vh;
-
-            svg {
-                display: none;
-            }
-        }
-
-        &.small {
-            padding-bottom: 10.5vh;
+        #footer {
             padding-top: 10.5vh;
+            padding-bottom: 10.5vh;
 
-            #links .bx--col {
-                padding-left: $spacing-04;
-                padding-right: $spacing-04;
-            }
+            #links {
+                .bx--col {
+                    padding-left: $spacing-04;
+                    padding-right: $spacing-04;
 
-            .link-text {
-                display: none;
-            }
-        }
+                    .link-text {
+                        display: none;
+                    }
 
-        &:not(.small):not(.medium) {
-            svg {
-                display: none
+                    svg {
+                        height: 32px;
+                    }
+                }
             }
         }
     }
