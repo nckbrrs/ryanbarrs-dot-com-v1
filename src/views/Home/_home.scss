@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600;700&display=swap');
 
 #home-page {
-    height: 100%;
     min-height: 100vh;
+    height: 100%;
     background: url("../../assets/images/bgImage.jpg");
     background-size: cover;
-    overflow-x: hidden;
+    //overflow-x: hidden;
 
     #header {
         animation: fadeIn 2s, slideInFromBelow 1s;
@@ -42,6 +42,7 @@
     #footer {
         animation: fadeIn 2s, slideInFromBelow 1s;
         padding-top: 17.5vh;
+        padding-bottom: 5.25vh;
         text-align: center;
 
         #links {
@@ -104,7 +105,6 @@
 
         #footer {
             padding-top: 14vh;
-            padding-bottom: 5.25vh;
 
             .link-text {
                 display: none;
